@@ -1,1 +1,960 @@
-@media(prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth}}html{font-size:62.5%;scroll-behavior:smooth}html::-webkit-scrollbar{display:none}html *{margin:0;padding:0;border:none;box-sizing:border-box;list-style:none;outline:none;text-decoration:none;font-size:1.6rem}html img{max-width:100%;display:block}html button{background-color:transparent;cursor:pointer}html ul,html ol{margin:0}html .container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}html .container-fluid .container-fav{width:100%;max-width:calc(1216px + 30px);margin:0 auto;padding:0 15px}@media(max-width: 600px){html{font-size:40%}}h1{color:red}h2{color:red}h3{color:red}h4{color:red}p{color:red}/*# sourceMappingURL=style.css.map */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  /* GRID */
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+html ::selection {
+  color: black;
+  background: black;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: white;
+}
+html::-webkit-scrollbar-thumb {
+  background: transparent linear-gradient(222deg, #f26522 0%, #f20732 100%) 0% 0% no-repeat padding-box;
+}
+html::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: #f20732;
+}
+html * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+html .hide {
+  display: none;
+}
+html body.overflow {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+html body.overflow div[fluid],
+html body.overflow section {
+  padding-right: 2rem;
+}
+html a {
+  color: unset;
+}
+html img {
+  max-width: 100%;
+  display: block;
+}
+html button {
+  background-color: transparent;
+  cursor: pointer;
+}
+html ul,
+html ol {
+  margin: 0;
+}
+html section,
+html div[fluid] {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+html section .niv,
+html div[fluid] .niv {
+  width: 100%;
+  max-width: 1164px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+html [niv-follow] {
+  transition: 0.32s;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@keyframes upandown {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(1rem);
+  }
+  66% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes svganimation {
+  0% {
+    transform: translateY(4rem);
+  }
+  80% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes logoanimation {
+  0% {
+    transform: translateY(-4rem);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes plusanimation {
+  0% {
+    transform: translateX(4rem);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes typing {
+  0% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 120%;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+@keyframes zigzag {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}
+h1,
+h1 span {
+  color: white;
+  font-size: 6rem;
+  letter-spacing: -0.12rem;
+  font-family: "Montserrat";
+  font-weight: bold;
+  line-height: 7.6rem;
+}
+h1 span,
+h1 span span {
+  color: transparent;
+  -webkit-text-stroke: 0.05rem white;
+}
+
+h2 {
+  font-size: 6.8rem;
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: #333333;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: #056cf2;
+}
+
+h4 {
+  color: red;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-family: "Lato";
+  color: #8d8d8d;
+}
+
+.backdrop {
+  background: #056cf2;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  pointer-events: none;
+  z-index: 5;
+  transition: 4s cubic-bezier(0.5, 0, 0, 1);
+  transition-delay: 2s;
+}
+.backdrop[hide] {
+  top: 200vh;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 6;
+  transition: 0.3s;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+header._hi {
+  top: -100rem;
+}
+header[starting] {
+  background: transparent;
+}
+header[starting] div[fluid] div.niv nav ul,
+header[starting] div[fluid] div.niv div,
+header[starting] div[fluid] div.niv .mobile {
+  position: relative;
+  top: -30rem;
+}
+header[starting] div[fluid] div.niv .logo svg path,
+header[starting] div[fluid] div.niv .logo svg rect {
+  fill: white;
+  stroke: transparent;
+}
+header div[fluid] {
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
+  position: relative;
+  z-index: 6;
+}
+header div[fluid].--menu {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  position: fixed;
+  top: 0;
+  right: -200vw;
+  z-index: 4;
+  transition: 0.32s;
+}
+header div[fluid].--menu[active] {
+  right: 0;
+}
+header div[fluid].--menu div.niv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+header div[fluid].--menu div.niv nav,
+header div[fluid].--menu div.niv div,
+header div[fluid].--menu div.niv ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header div[fluid] div.niv {
+  max-width: 1681px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header div[fluid] div.niv .mobile {
+  display: none;
+  height: 4.2rem;
+  width: 4.2rem;
+  position: relative;
+  background: url(/assets/img/icon_hamburguer_header.svg);
+  transition: 0.32s;
+  background-size: 100% 100%;
+}
+header div[fluid] div.niv .mobile:active {
+  transform: scale(0);
+}
+header div[fluid] div.niv .mobile[active] {
+  background: url(/assets/img/icon_close_header.svg);
+  background-size: 100% 100%;
+}
+header div[fluid] div.niv nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 9.9rem;
+}
+header div[fluid] div.niv nav .logo {
+  animation: logoanimation 1s ease-in;
+}
+header div[fluid] div.niv nav .logo svg {
+  overflow: hidden;
+}
+header div[fluid] div.niv nav .logo svg path,
+header div[fluid] div.niv nav .logo svg rect {
+  transition: 0.32s;
+}
+header div[fluid] div.niv nav .logo svg #escrita {
+  animation: svganimation 1.3s ease-out;
+}
+header div[fluid] div.niv nav .logo svg #plus {
+  animation: plusanimation 1.3s ease-out;
+}
+header div[fluid] div.niv nav ul {
+  top: 0;
+  position: relative;
+  transition: 0.32s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 7.4rem;
+}
+header div[fluid] div.niv nav ul li {
+  color: #aaaaaa;
+  position: relative;
+  font-size: 1.6rem;
+  user-select: none;
+  font-family: "Roboto";
+  transition: 0.32s;
+}
+header div[fluid] div.niv nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  transition: 0.32s;
+  width: 0;
+  height: 3px;
+  background-image: url(/assets/img/effect_balls_header.svg);
+}
+header div[fluid] div.niv nav ul li[active] {
+  color: #f26522;
+  font-weight: bold;
+}
+header div[fluid] div.niv nav ul li[active]::after {
+  width: 4.8rem;
+}
+header div[fluid] div.niv nav ul li:hover {
+  color: #f26522;
+}
+header div[fluid] div.niv nav ul li:hover::after {
+  width: 4.8rem;
+}
+header div[fluid] div.niv div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 46.2rem;
+  gap: 6.2rem;
+  position: relative;
+  transition: 0.32s;
+  top: 0;
+}
+header div[fluid] div.niv div a {
+  transition: 0.32s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0.9rem;
+  color: #056cf2;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+header div[fluid] div.niv div a:hover {
+  opacity: 0.7;
+}
+header div[fluid] div.niv div button {
+  height: 6rem;
+  width: 100%;
+  max-width: 23rem;
+  box-shadow: 0px 10px 16px #0000004a;
+  background: transparent linear-gradient(222deg, #f26522 0%, #f20732 100%) 0% 0% no-repeat padding-box;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+  border-radius: 3rem 0;
+  transition: 0.32s ease-in;
+}
+header div[fluid] div.niv div button:hover {
+  border-radius: 0 3rem;
+  box-shadow: 10px 0px 16px #0000004a;
+  transform: scale(1.05);
+}
+@media (max-width: 1280px) {
+  header div[fluid]:not(.--menu) div.niv nav ul li:not([active]) {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  header div[fluid]:not(.--menu) div.niv nav {
+    gap: 3rem;
+  }
+  header div[fluid]:not(.--menu) div.niv div {
+    gap: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  header div[fluid]:not(.--menu) div.niv .mobile {
+    display: block;
+  }
+  header div[fluid]:not(.--menu) div.niv nav ul,
+header div[fluid]:not(.--menu) div.niv div {
+    display: none;
+  }
+}
+
+section.hero {
+  background: url("/assets/img/fundo_hero.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding-top: 9.5rem;
+  min-height: 95.5rem;
+  overflow: hidden;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.hero div.niv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+section.hero div.niv div.niv-text {
+  max-width: 59.3rem;
+}
+section.hero div.niv div.niv-text h1 {
+  margin-bottom: 2.5rem;
+  margin-top: 14.5rem;
+  position: relative;
+  transition: 1s;
+  transition-delay: 3.5s;
+}
+section.hero div.niv div.niv-text h1[niv-fade] {
+  opacity: 0;
+  transform: scale(0) rotate(90deg);
+}
+section.hero div.niv div.niv-text h1::after {
+  content: "";
+  height: 11px;
+  width: 100%;
+  max-width: 164px;
+  background: url("/assets/img/effect_balls_hero.svg");
+  position: absolute;
+  top: -4.7rem;
+  left: 0;
+}
+section.hero div.niv div.niv-text p {
+  transition: 1s;
+  transition-delay: 3.7s;
+  margin-top: 2.5rem;
+  color: white;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  margin-bottom: 4.5rem;
+  font-family: "Roboto";
+  max-width: 55.2rem;
+}
+section.hero div.niv div.niv-text p[niv-fade] {
+  opacity: 0;
+  transform: translateY(4rem);
+}
+section.hero div.niv div.niv-text button {
+  height: 7rem;
+  width: 100%;
+  max-width: 27.2rem;
+  border-radius: 3rem 0;
+  box-shadow: 0px 10px 16px #0000004a;
+  background: transparent linear-gradient(222deg, #f26522 0%, #f20732 100%) 0% 0% no-repeat padding-box;
+  color: white;
+  font-size: 2.4rem;
+  font-family: "Montserrat";
+  font-weight: bold;
+  transition: 0.32s ease-in-out;
+}
+section.hero div.niv div.niv-text button:hover {
+  border-radius: 0 3rem;
+  transform: scale(1.05);
+}
+section.hero div.niv div.niv-text a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1.2rem;
+  margin-top: 4.8rem;
+  animation: upandown 8s linear infinite;
+}
+section.hero div.niv div.niv-text a span {
+  font-size: 1.6rem;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+section.hero div.niv div.niv-picture {
+  height: 66.6rem;
+  width: 85.3rem;
+  position: relative;
+}
+section.hero div.niv div.niv-picture div.floating img {
+  position: absolute;
+}
+section.hero div.niv div.niv-picture div.floating img:first-child {
+  left: 18.3rem;
+  top: 17.3rem;
+  transition: 0.4s;
+}
+section.hero div.niv div.niv-picture div.floating img:nth-child(2) {
+  left: 27.7rem;
+  top: 21.9rem;
+  transition: 0.6s;
+}
+section.hero div.niv div.niv-picture div.floating img:nth-child(3) {
+  left: 18.3rem;
+  top: 29.2rem;
+}
+section.hero div.niv div.niv-picture picture {
+  transition: 1.5s;
+  transition-delay: 3.5s;
+  position: absolute;
+  height: 66.6rem;
+  width: 85.3rem;
+  display: block;
+  right: -19rem;
+  top: 19.4rem;
+}
+section.hero div.niv div.niv-picture picture[niv-fade] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+section.hero div.niv div.niv-picture picture::after {
+  content: "";
+  position: absolute;
+  top: -6.9rem;
+  left: 74.5rem;
+  height: 10.2rem;
+  width: 100%;
+  max-width: 17.1rem;
+  background: url("/assets/img/effect_balls_net_hero.svg");
+}
+@media (max-width: 1280px) {
+  section.hero div.niv div.niv-picture .floating {
+    position: relative;
+    left: -10rem;
+  }
+  section.hero div.niv div.niv-picture picture {
+    left: -40rem;
+  }
+}
+@media (max-width: 800px) {
+  section.hero {
+    background-position: top center;
+  }
+  section.hero div.niv div.niv-text {
+    z-index: 2;
+  }
+  section.hero div.niv div.niv-picture {
+    z-index: 1;
+  }
+  section.hero div.niv div.niv-picture .floating {
+    left: -5rem;
+  }
+}
+@media (max-width: 600px) {
+  section.hero div.niv div.niv-picture {
+    display: none;
+  }
+}
+
+section.quem-somos {
+  overflow: hidden;
+  padding-bottom: 11.2rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.quem-somos div.niv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+section.quem-somos div.niv div.niv-text {
+  max-width: 55.2rem;
+}
+section.quem-somos div.niv div.niv-text h2 {
+  margin-top: 0.8rem;
+  max-width: 40.5rem;
+  margin-bottom: 3.7rem;
+}
+section.quem-somos div.niv div.niv-picture {
+  transition: 1s;
+  transition-delay: 0;
+}
+section.quem-somos div.niv div.niv-picture[niv-fade] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+section.quem-somos div.niv div.niv-picture .floating {
+  position: absolute;
+}
+section.quem-somos div.niv div.niv-picture .floating img:first-child {
+  position: relative;
+  left: -21.5rem;
+}
+section.quem-somos div.niv div.niv-picture .floating img:nth-child(2) {
+  position: relative;
+  right: -27rem;
+  top: -5.9rem;
+}
+section.quem-somos div.niv div.niv-picture .floating img:last-child {
+  position: relative;
+  left: 2.9rem;
+  top: 19.1rem;
+}
+section.quem-somos div.niv div.niv-picture picture {
+  width: 85.4rem;
+  height: 69.6rem;
+  display: block;
+  margin-left: -30.7rem;
+}
+@media (max-width: 800px) {
+  section.quem-somos {
+    padding-top: 2rem;
+  }
+  section.quem-somos div.niv {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 600px) {
+  section.quem-somos {
+    padding-top: 6rem;
+  }
+  section.quem-somos div.niv {
+    position: relative;
+  }
+  section.quem-somos div.niv div.niv-picture .floating {
+    top: 0;
+    z-index: -1;
+    opacity: 0.5;
+  }
+}
+
+section.missao {
+  background: url(/assets/img/fundo_missao.svg);
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.missao div.niv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+section.missao div.niv div.niv-nav {
+  max-width: 22.3rem;
+}
+section.missao div.niv div.niv-nav ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 11.2rem;
+}
+section.missao div.niv div.niv-nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 3rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+section.missao div.niv div.niv-nav ul li span {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+section.missao div.niv div.niv-nav ul li span,
+section.missao div.niv div.niv-nav ul li img {
+  z-index: 2;
+}
+section.missao div.niv div.niv-nav ul li::after {
+  position: absolute;
+  height: 17.8rem;
+  width: 100%;
+  max-width: 67.9rem;
+  z-index: 1;
+  content: "";
+  left: 0;
+  transition: 0.32s;
+}
+section.missao div.niv div.niv-nav ul li[active] {
+  opacity: 1;
+}
+section.missao div.niv div.niv-nav ul li[active]::after {
+  background: #00000015;
+}
+section.missao div.niv div.niv-nav ul li:hover::after {
+  background: #ffffff15;
+}
+section.missao div.niv div.niv-text {
+  position: relative;
+  height: 75.3rem;
+  width: 32.4rem;
+}
+section.missao div.niv div.niv-text h2,
+section.missao div.niv div.niv-text p {
+  color: white;
+}
+section.missao div.niv div.niv-text p {
+  margin-top: 2.4rem;
+}
+section.missao div.niv div.niv-text span {
+  position: absolute;
+  display: block;
+  transition: 0.32s;
+  top: 20rem;
+  opacity: 0;
+  pointer-events: none;
+}
+section.missao div.niv div.niv-text span[active] {
+  pointer-events: all;
+  opacity: 1;
+  top: 7.7rem;
+}
+section.missao div.niv div.niv-picture {
+  position: relative;
+  height: 75.3rem;
+  width: 45.5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+section.missao div.niv div.niv-picture::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: transparent linear-gradient(180deg, #056cf200 0%, #033679 100%) 0% 0% no-repeat padding-box;
+  left: 0;
+  top: 0;
+}
+section.missao div.niv div.niv-picture picture {
+  position: absolute;
+  transition: 0.32s;
+  top: 20rem;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+section.missao div.niv div.niv-picture picture[active] {
+  pointer-events: all;
+  opacity: 1;
+  top: 0;
+}
+section.missao div.niv div.niv-picture .floating {
+  position: absolute;
+  bottom: -10rem;
+  z-index: 2;
+  animation: upandown 4s linear infinite;
+}
+@media (max-width: 900px) {
+  section.missao div.niv div.niv-picture {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+  section.missao div.niv div.niv-picture picture[active] {
+    opacity: 0.7;
+  }
+  section.missao div.niv div.niv-text {
+    z-index: 3;
+  }
+  section.missao div.niv div.niv-nav {
+    z-index: 1;
+  }
+  section.missao div.niv div.floating {
+    z-index: 3;
+  }
+}
+@media (max-width: 600px) {
+  section.missao {
+    padding-top: 3rem;
+  }
+  section.missao div.niv {
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+  }
+  section.missao div.niv div.niv-nav {
+    max-width: unset;
+    width: 100%;
+    z-index: 3;
+  }
+  section.missao div.niv div.niv-nav ul {
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  section.missao div.niv div.niv-nav ul li {
+    gap: 1rem;
+  }
+  section.missao div.niv div.niv-nav ul li span {
+    font-size: 2rem;
+  }
+  section.missao div.niv div.niv-nav ul li::after {
+    display: none;
+  }
+  section.missao div.niv div.niv-picture {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section.missao div.niv div.niv-picture::after {
+    display: none;
+  }
+  section.missao div.niv div.niv-picture picture {
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem 3rem 0 0;
+    overflow: hidden;
+  }
+  section.missao div.niv div.niv-picture picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section.missao div.niv div.niv-picture picture[active] {
+    opacity: 0.2;
+    z-index: 2;
+  }
+  section.missao div.niv div.niv-text {
+    width: 100%;
+    max-width: 100%;
+    height: 45rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

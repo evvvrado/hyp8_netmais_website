@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="42" viewBox="0 0 40 42">
+  <g id="icon_close_header" transform="translate(-1316.021 274.389)">
+    <g id="Grupo_10134" data-name="Grupo 10134" transform="translate(1316.021 -273.979)">
+      <ellipse id="Elipse_54" data-name="Elipse 54" cx="3.5" cy="4" rx="3.5" ry="4" transform="translate(1 -0.41)" fill="#f26522"/>
+      <ellipse id="Elipse_62" data-name="Elipse 62" cx="3.5" cy="4" rx="3.5" ry="4" transform="translate(8 8.59)" fill="#f26522"/>
+      <ellipse id="Elipse_64" data-name="Elipse 64" cx="3.5" cy="4" rx="3.5" ry="4" transform="translate(8 25.59)" fill="#f26522"/>
+      <circle id="Elipse_55" data-name="Elipse 55" cx="4" cy="4" r="4" transform="translate(32 -0.41)" fill="#f26522" opacity="0.7"/>
+      <circle id="Elipse_59" data-name="Elipse 59" cx="4" cy="4" r="4" transform="translate(16 16.59)" fill="#f26522"/>
+      <circle id="Elipse_63" data-name="Elipse 63" cx="4" cy="4" r="4" transform="translate(25 8.59)" fill="#f26522"/>
+      <circle id="Elipse_65" data-name="Elipse 65" cx="4" cy="4" r="4" transform="translate(25 25.59)" fill="#f26522"/>
+      <circle id="Elipse_60" data-name="Elipse 60" cx="3.5" cy="3.5" r="3.5" transform="translate(0 34.59)" fill="#f26522"/>
+      <ellipse id="Elipse_61" data-name="Elipse 61" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(32 34.59)" fill="#f26522" opacity="0.7"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,186 @@
+section.hero {
+    background: url("/assets/img/fundo_hero.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding-top: 9.5rem;
+    min-height: 95.5rem;
+    overflow: hidden;
+
+    div.niv {
+        @include flex(row, flex-start, space-between);
+
+        div.niv-text {
+            max-width: 59.3rem;
+
+            h1 {
+                margin-bottom: 2.5rem;
+                margin-top: 14.5rem;
+
+                position: relative;
+
+                @include fade(scale(0) rotate(90deg), 1s, 3.5s);
+
+                &::after {
+                    content: "";
+                    height: 11px;
+                    width: 100%;
+                    max-width: 164px;
+
+                    background: url("/assets/img/effect_balls_hero.svg");
+
+                    position: absolute;
+                    top: -4.7rem;
+                    left: 0;
+                }
+            }
+
+            p {
+                @include fade(translateY(4rem), 1s, 3.7s);
+                margin-top: 2.5rem;
+                color: $white;
+                font-size: 2.4rem;
+                line-height: 3.6rem;
+                margin-bottom: 4.5rem;
+
+                font-family: "Roboto";
+
+                max-width: 55.2rem;
+            }
+
+            button {
+                height: 7rem;
+                width: 100%;
+                max-width: 27.2rem;
+                border-radius: 3rem 0;
+                box-shadow: 0px 10px 16px #0000004a;
+
+                background: $main-gradient;
+
+                color: $white;
+                font-size: 2.4rem;
+                font-family: "Montserrat";
+                font-weight: bold;
+
+                transition: 0.32s ease-in-out;
+
+                &:hover {
+                    border-radius: 0 3rem;
+                    transform: scale(1.05);
+                }
+            }
+
+            a {
+                @include flex(row, center, flex-start);
+                gap: 1.2rem;
+                margin-top: 4.8rem;
+
+                span {
+                    font-size: 1.6rem;
+                    color: $white;
+                    font-family: "Montserrat";
+                    font-weight: bold;
+                }
+
+                animation: upandown 8s linear infinite;
+            }
+        }
+
+        div.niv-picture {
+            height: 66.6rem;
+            width: 85.3rem;
+            position: relative;
+
+            // background-color: red;
+
+            div.floating {
+                img {
+                    position: absolute;
+
+                    &:first-child {
+                        left: 18.3rem;
+                        top: 17.3rem;
+                        transition: 0.4s;
+                    }
+
+                    &:nth-child(2) {
+                        left: 27.7rem;
+                        top: 21.9rem;
+                        transition: 0.6s;
+                    }
+
+                    &:nth-child(3) {
+                        left: 18.3rem;
+                        top: 29.2rem;
+                    }
+                }
+            }
+
+            picture {
+                @include fade(translateX(-200px), 1.5s, 3.5s);
+
+                position: absolute;
+
+                height: 66.6rem;
+                width: 85.3rem;
+
+                display: block;
+
+                right: -19rem;
+                top: 19.4rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+
+                    top: -6.9rem;
+                    left: 74.5rem;
+
+                    height: 10.2rem;
+                    width: 100%;
+                    max-width: 17.1rem;
+
+                    background: url("/assets/img/effect_balls_net_hero.svg");
+                }
+            }
+        }
+    }
+
+    @include responsive(1280px) {
+        div.niv {
+            div.niv-picture {
+                .floating {
+                    position: relative;
+                    left: -10rem;
+                }
+                picture {
+                    left: -40rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        background-position: top center;
+
+        div.niv {
+            div.niv-text {
+                z-index: 2;
+            }
+            div.niv-picture {
+                z-index: 1;
+
+                .floating {
+                    left: -5rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(600px) {
+        div.niv {
+            div.niv-picture {
+                display: none;
+            }
+        }
+    }
+}

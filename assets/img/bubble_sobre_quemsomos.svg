@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="169" height="169" viewBox="0 0 169 169">
+  <defs>
+    <filter id="Retângulo_3835" x="0" y="0" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_10078" data-name="Grupo 10078" transform="translate(-343.5 -1431.5)">
+    <g id="Grupo_10075" data-name="Grupo 10075" transform="translate(139 12)">
+      <g transform="matrix(1, 0, 0, 1, 204.5, 1419.5)" filter="url(#Retângulo_3835)">
+        <rect id="Retângulo_3835-2" data-name="Retângulo 3835" width="136" height="136" rx="28" transform="translate(16.5 10.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Grupo_10077" data-name="Grupo 10077" transform="translate(383.61 1466.61)">
+      <path id="Caminho_4579" data-name="Caminho 4579" d="M0,0H86.781V86.781H0Z" fill="none"/>
+      <circle id="Elipse_47" data-name="Elipse 47" cx="32.5" cy="32.5" r="32.5" transform="translate(11.39 11.39)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+      <line id="Linha_14" data-name="Linha 14" x2="0.036" transform="translate(32.543 36.159)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+      <line id="Linha_15" data-name="Linha 15" x2="0.036" transform="translate(54.238 36.159)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+      <path id="Caminho_4580" data-name="Caminho 4580" d="M9.5,15a12.656,12.656,0,0,0,18.079,0" transform="translate(24.851 39.238)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+    </g>
+  </g>
+</svg>

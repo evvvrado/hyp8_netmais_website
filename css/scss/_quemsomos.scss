@@ -1,0 +1,70 @@
+section.quem-somos {
+    overflow: hidden;
+    padding-bottom: 11.2rem;
+    div.niv {
+        @include flex(row, center, space-between);
+
+        div.niv-text {
+            max-width: 55.2rem;
+            h2 {
+                margin-top: 0.8rem;
+                max-width: 40.5rem;
+                margin-bottom: 3.7rem;
+            }
+        }
+
+        div.niv-picture {
+            @include fade(translateX(-200px), 1s);
+
+            .floating {
+                position: absolute;
+
+                img {
+                    &:first-child {
+                        position: relative;
+                        left: -21.5rem;
+                    }
+                    &:nth-child(2) {
+                        position: relative;
+                        right: -27rem;
+                        top: -5.9rem;
+                    }
+                    &:last-child {
+                        position: relative;
+                        left: 2.9rem;
+                        top: 19.1rem;
+                    }
+                }
+            }
+
+            picture {
+                width: 85.4rem;
+                height: 69.6rem;
+                display: block;
+                margin-left: -30.7rem;
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        padding-top: 2rem;
+        div.niv {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include responsive(600px) {
+        padding-top: 6rem;
+
+        div.niv {
+            position: relative;
+            div.niv-picture {
+                .floating {
+                    top: 0;
+                    z-index: -1;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

@@ -4,14 +4,265 @@ header {
     top: 0;
     left: 0;
 
+    background: $white;
+
     z-index: 6;
     transition: 0.3s;
 
     &._re {
-        top: -50rem;
+        // top: -50rem;
     }
 
     &._hi {
         top: -100rem;
+    }
+
+    &[starting] {
+        background: transparent;
+        div[fluid] {
+            div.niv {
+                nav ul,
+                div,
+                .mobile {
+                    position: relative;
+                    top: -30rem;
+                }
+
+                .logo {
+                    svg {
+                        path,
+                        rect {
+                            fill: $white;
+                            stroke: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div[fluid] {
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+        position: relative;
+        z-index: 6;
+
+        &.--menu {
+            height: 100vh;
+            width: 100vw;
+            background: $white;
+
+            position: fixed;
+            top: 0;
+            right: -200vw;
+
+            z-index: 4;
+
+            transition: 0.32s;
+
+            &[active] {
+                right: 0;
+            }
+
+            div.niv {
+                @include flex(column, center, center);
+                height: 100%;
+                width: 100%;
+                position: relative;
+
+                nav,
+                div,
+                ul {
+                    @include flex(column, center, center);
+                }
+            }
+        }
+
+        div.niv {
+            max-width: calc(1651px + 30px) !important;
+
+            @include flex(row, center, space-between);
+
+            .mobile {
+                display: none;
+
+                height: 4.2rem;
+                width: 4.2rem;
+                position: relative;
+
+                background: url(/assets/img/icon_hamburguer_header.svg);
+                transition: 0.32s;
+                background-size: 100% 100%;
+
+                &:active {
+                    transform: scale(0);
+                }
+
+                &[active] {
+                    background: url(/assets/img/icon_close_header.svg);
+                    background-size: 100% 100%;
+                }
+            }
+            nav {
+                @include flex(row, center, flex-start);
+                gap: 9.9rem;
+
+                .logo {
+                    animation: logoanimation 1s ease-in;
+                    svg {
+                        overflow: hidden;
+                        path,
+                        rect {
+                            transition: 0.32s;
+                        }
+
+                        #escrita {
+                            animation: svganimation 1.3s ease-out;
+                        }
+                        #plus {
+                            animation: plusanimation 1.3s ease-out;
+                        }
+                    }
+                }
+
+                ul {
+                    top: 0;
+                    position: relative;
+                    transition: 0.32s;
+                    @include flex(row, center, flex-start);
+                    gap: 7.4rem;
+                    li {
+                        color: $grey;
+                        position: relative;
+                        font-size: 1.6rem;
+                        user-select: none;
+                        font-family: "Roboto";
+
+                        transition: 0.32s;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+
+                            left: 0;
+                            bottom: -0.6rem;
+
+                            transition: 0.32s;
+
+                            width: 0;
+                            height: 3px;
+
+                            background-image: url(/assets/img/effect_balls_header.svg);
+                        }
+
+                        &[active] {
+                            color: $main-orange;
+                            font-weight: bold;
+                            &::after {
+                                width: 4.8rem;
+                            }
+                        }
+
+                        &:hover {
+                            color: $main-orange;
+                            &::after {
+                                width: 4.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            div {
+                @include flex(row, center, flex-end);
+                width: 46.2rem;
+                gap: 6.2rem;
+                position: relative;
+                transition: 0.32s;
+                top: 0;
+
+                a {
+                    transition: 0.32s;
+                    @include flex(row, center, flex-start);
+                    gap: 0.9rem;
+
+                    color: $main-blue;
+
+                    font-family: "Montserrat";
+                    font-weight: 500;
+                    font-size: 1.8rem;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                button {
+                    height: 6rem;
+                    width: 100%;
+                    max-width: 23rem;
+
+                    box-shadow: 0px 10px 16px #0000004a;
+
+                    background: $main-gradient;
+
+                    color: $white;
+                    font-weight: bold;
+                    font-family: "Montserrat";
+                    font-size: 1.8rem;
+
+                    border-radius: 3rem 0;
+
+                    transition: 0.32s ease-in;
+
+                    &:hover {
+                        border-radius: 0 3rem;
+                        box-shadow: 10px 0px 16px #0000004a;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(1280px) {
+        div[fluid]:not(.--menu) {
+            div.niv {
+                nav {
+                    ul {
+                        li:not([active]) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        div[fluid]:not(.--menu) {
+            div.niv {
+                nav {
+                    gap: 3rem;
+                }
+                div {
+                    gap: 3rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(600px) {
+        div[fluid]:not(.--menu) {
+            div.niv {
+                .mobile {
+                    display: block;
+                }
+                nav ul,
+                div {
+                    display: none;
+                }
+            }
+        }
     }
 }

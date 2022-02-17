@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Lato", sans-serif;
   scroll-behavior: smooth;
 
   ::selection {
@@ -20,18 +20,18 @@ html {
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: $white;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: black;
+    background: $main-gradient;
   }
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
-    background: black;
+    background: $main-red;
   }
 
   * {
@@ -44,6 +44,25 @@ html {
     text-decoration: none;
 
     font-size: 1.6rem;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  body.overflow {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    div[fluid],
+    section {
+      padding-right: 2rem;
+    }
+  }
+
+  a {
+    color: unset;
   }
 
   img {
@@ -73,7 +92,7 @@ html {
 
     .niv {
       width: 100%;
-      max-width: calc(1216px + 30px);
+      max-width: calc(1134px + 30px);
       margin: 0 auto;
       padding: 0 15px;
     }

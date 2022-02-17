@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="141" viewBox="0 0 141 141">
+  <defs>
+    <filter id="Retângulo_3835" x="0" y="0" width="141" height="141" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_10080" data-name="Grupo 10080" transform="translate(-343.136 -1431.136)">
+    <g id="Grupo_10075" data-name="Grupo 10075" transform="translate(360 1442)">
+      <g transform="matrix(1, 0, 0, 1, -16.86, -10.86)" filter="url(#Retângulo_3835)">
+        <rect id="Retângulo_3835-2" data-name="Retângulo 3835" width="108" height="108" rx="28" transform="translate(16.5 10.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Grupo_10089" data-name="Grupo 10089" transform="translate(380.882 1462.548)">
+      <path id="Caminho_4581" data-name="Caminho 4581" d="M0,0H65.508V65.508H0Z" fill="none"/>
+      <rect id="Retângulo_3838" data-name="Retângulo 3838" width="49.13" height="21.569" rx="2" transform="translate(8.388 35.551)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="Linha_16" data-name="Linha 16" y2="0.027" transform="translate(46.402 46.402)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="Linha_17" data-name="Linha 17" y2="0.027" transform="translate(35.484 46.402)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="Linha_18" data-name="Linha 18" y1="5.992" transform="translate(40.742 29.559)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Caminho_4582" data-name="Caminho 4582" d="M11.75,11.635a10.918,10.918,0,0,1,17.742,0" transform="translate(20.322 12.248)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Caminho_4583" data-name="Caminho 4583" d="M8.5,12.27a21.836,21.836,0,0,1,35.484,0" transform="translate(14.701 5.472)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

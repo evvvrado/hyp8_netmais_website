@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121" height="119" viewBox="0 0 121 119">
+  <defs>
+    <filter id="União_2" x="0" y="0" width="121" height="119" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_10127" data-name="Grupo 10127" transform="translate(-1160 -381)">
+    <g id="Grupo_10064" data-name="Grupo 10064" transform="translate(79 -13)">
+      <g transform="matrix(1, 0, 0, 1, 1081, 394)" filter="url(#União_2)">
+        <path id="União_2-2" data-name="União 2" d="M363.572,86H345a24,24,0,0,1-24-24V24A24,24,0,0,1,345,0h55a24,24,0,0,1,24,24V62a24,24,0,0,1-24,24H381.429L372.5,101Z" transform="translate(-312 6)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Grupo_10099" data-name="Grupo 10099" transform="translate(1193 401)">
+      <path id="Caminho_4590" data-name="Caminho 4590" d="M0,0H58V58H0Z" fill="none"/>
+      <path id="Caminho_4591" data-name="Caminho 4591" d="M3,42.7l3.142-9.425C.526,24.966,2.7,14.247,11.216,8.2A23.819,23.819,0,0,1,39.843,9.362c7.866,6.71,8.929,17.559,2.486,25.376s-18.4,10.186-27.97,5.541L3,42.7" transform="translate(4.25 5.637)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="Linha_21" data-name="Linha 21" y2="0.024" transform="translate(29 29)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="Linha_22" data-name="Linha 22" y2="0.024" transform="translate(19.333 29)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="Linha_23" data-name="Linha 23" y2="0.024" transform="translate(38.667 29)" fill="none" stroke="#056cf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

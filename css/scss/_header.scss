@@ -1,0 +1,17 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 6;
+    transition: 0.3s;
+
+    &._re {
+        top: -50rem;
+    }
+
+    &._hi {
+        top: -100rem;
+    }
+}

@@ -1,0 +1,51 @@
+@keyframes upandown {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(1rem);
+  }
+  66% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes svganimation {
+  0% {
+    stroke-dasharray: 78;
+  }
+  70% {
+    stroke-dasharray: 400;
+  }
+  100% {
+    fill: $white;
+    stroke: 1px;
+  }
+}
+
+@keyframes typing {
+  0% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 120%;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+
+@keyframes zigzag {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}

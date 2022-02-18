@@ -1,0 +1,148 @@
+section.lojas {
+    position: relative;
+    padding-bottom: 15rem;
+    overflow: hidden;
+
+    div.niv {
+        padding-top: 9.6rem;
+        div.niv-text {
+            position: relative;
+            max-width: 36rem;
+            z-index: 2;
+            @include fade(translateX(-20rem), 1s);
+
+            h2 {
+                font-size: 4.2rem;
+                margin-bottom: 2.1rem;
+                margin-top: 0.3rem;
+            }
+
+            position: relative;
+
+            &::after {
+                height: 7.8rem;
+                width: 13.1rem;
+
+                position: absolute;
+                content: "";
+
+                background: url(/assets/img/effect_balls_lojas.svg);
+                background-size: cover;
+
+                left: -16.8rem;
+
+                top: 0.5rem;
+            }
+
+            p {
+                color: $light-grey;
+            }
+        }
+
+        div.niv-mapa {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        div.niv-enderecos {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            margin-top: 15.4rem;
+
+            div.scroll {
+                @include flex(row, center, space-between);
+
+                div.box {
+                    height: 15.2rem;
+                    width: 35.1rem;
+
+                    background-color: $white;
+                    box-shadow: 0px 6px 11px #00000029;
+                    border-radius: 1.2rem;
+
+                    padding: 1.5rem 0 0 1.14rem;
+
+                    @include flex(row, flex-start, flex-start);
+                    gap: 2.1rem;
+                    @include fade(translateY(20rem), 1s);
+
+                    @for $i from 1 through 3 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: calc($i * 0.5s);
+                        }
+                    }
+
+                    main {
+                        max-width: 22.8rem;
+
+                        strong {
+                            display: block;
+                            font-size: 2.4rem;
+                            font-family: "Lato";
+                            font-weight: bold;
+                            margin-bottom: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(1280px) {
+        div.niv {
+            @include flex(row, flex-start, space-between);
+
+            div.niv-text {
+                margin-left: 20rem;
+            }
+
+            div.niv-mapa {
+                display: none;
+            }
+
+            div.niv-enderecos {
+                margin-right: 10rem;
+                margin-top: 0;
+                width: max-content;
+                div.scroll {
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        div.niv {
+            flex-direction: column;
+            gap: 3rem;
+
+            div.niv-enderecos {
+                overflow: scroll;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                width: 100vw;
+                padding: 5rem;
+
+                scroll-snap-type: x mandatory;
+
+                div.scroll {
+                    flex-direction: row;
+                    width: max-content;
+                    gap: 0;
+
+                    div.box {
+                        margin-left: 4rem;
+                        scroll-snap-align: start;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+section.celular {
+    padding-top: 10.7rem;
+    padding-bottom: 13.2rem;
+
+    background: url("/assets/img/fundo_celular.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    div.niv {
+        position: relative;
+        .floating {
+            position: absolute;
+
+            top: -5rem;
+            left: 0;
+        }
+
+        @include flex(row, flex-start, space-between);
+
+        div.niv-text {
+            max-width: 42.9rem;
+            margin-top: 20rem;
+
+            p {
+                color: $white;
+                margin-bottom: 7.5rem;
+            }
+
+            h2 {
+                font-size: 4.2rem;
+                line-height: 6.3rem;
+                margin-bottom: 4.8arem;
+                color: $white;
+                @include fade(scale(0) rotate(20deg), 1s);
+            }
+
+            a {
+                display: block;
+                width: max-content;
+                transition: 0.32s;
+            }
+            a:hover {
+                opacity: 0.7;
+            }
+        }
+
+        div.niv-phone {
+            margin-right: 9.7rem;
+
+            picture {
+                display: block;
+                @include fade(rotateY(180deg), 1s, 0.5s);
+                transform-style: preserve-3d;
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        div.niv {
+            div.niv-phone {
+                margin: 0;
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        background-size: cover;
+        padding-bottom: 4rem;
+
+        div.niv {
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+
+            div.niv-text {
+                margin-top: 3rem;
+                a {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+  <g id="Grupo_10123" data-name="Grupo 10123" transform="translate(-1572 -6233)">
+    <g id="Retângulo_3840" data-name="Retângulo 3840" transform="translate(1572 6233)" fill="none" stroke="#fff" stroke-width="2">
+      <rect width="56" height="56" rx="10" stroke="none"/>
+      <rect x="1" y="1" width="54" height="54" rx="9" fill="none"/>
+    </g>
+    <g id="Grupo_10098" data-name="Grupo 10098" transform="translate(1578.047 6239.046)">
+      <path id="Caminho_4589" data-name="Caminho 4589" d="M0,0H43.907V43.907H0Z" fill="none"/>
+      <rect id="Retângulo_3841" data-name="Retângulo 3841" width="30" height="30" rx="4" transform="translate(6.953 6.953)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle id="Elipse_51" data-name="Elipse 51" cx="5" cy="5" r="5" transform="translate(16.953 16.953)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Linha_20" data-name="Linha 20" y2="0.002" transform="translate(30.186 13.721)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

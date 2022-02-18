@@ -160,11 +160,17 @@ section.hero {
     }
 
     @include responsive(800px) {
-        background-position: top center;
+        background-size: cover;
 
         div.niv {
             div.niv-text {
                 z-index: 2;
+
+                h1 {
+                    span {
+                        display: block;
+                    }
+                }
             }
             div.niv-picture {
                 z-index: 1;

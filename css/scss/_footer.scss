@@ -1,0 +1,86 @@
+footer {
+    div[fluid] {
+        padding-top: 6rem;
+        background-color: $dark-blue;
+
+        div.niv {
+            div.niv-top {
+                @include flex(row, flex-end, space-between);
+
+                ul {
+                    @include flex(row, flex-end, space-between);
+                    width: 57.1rem;
+
+                    li {
+                        transition: 0.32s;
+                        color: $white;
+                        font-size: 1.6rem;
+
+                        font-family: "Roboto";
+
+                        &:hover {
+                            color: $main-orange;
+                            font-weight: bold;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+
+                div {
+                    @include flex(row-reverse, center, flex-start);
+                    gap: 0.9rem;
+
+                    a {
+                        transition: 0.32s;
+                        &:hover {
+                            opacity: 0.7;
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+
+            div.niv-copyright {
+                border-top: solid $lighest-blue 0.1rem;
+                padding-top: 2rem;
+                padding-bottom: 4rem;
+                margin-top: 4.8rem;
+
+                ul {
+                    @include flex(row, center, space-between);
+
+                    li {
+                        color: $white;
+                        opacity: 0.7;
+
+                        font-family: "Roboto";
+                        font-size: 1.6rem;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        div[fluid] {
+            div.niv {
+                div.niv-top,
+                div.niv-top ul,
+                div.niv-copyright ul {
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 100%;
+
+                    gap: 3rem;
+                }
+            }
+        }
+    }
+}

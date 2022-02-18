@@ -1,0 +1,173 @@
+section.planos {
+    padding-top: 10.8rem;
+    padding-bottom: 8.7rem;
+
+    background: $light-blue;
+
+    position: relative;
+
+    div.niv {
+        div.niv-title {
+            text-align: center;
+            margin-bottom: 5.3rem;
+
+            position: relative;
+            z-index: 2;
+
+            h3 {
+                display: block;
+                @include fade(scale(0) rotate(20deg), 1s);
+            }
+
+            h2 {
+                display: block;
+                @include fade(scale(0) rotate(20deg), 1s, 0.5s);
+            }
+        }
+
+        div.niv-boxes {
+            @include flex(row, flex-start, flex-start);
+            gap: 3rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+
+            div.box {
+                @include flex(column, center, flex-start);
+
+                @include fade(rotateY(180deg), 0.32s);
+                transform-style: preserve-3d;
+
+                height: 36.8rem;
+                width: 35.8rem;
+                box-shadow: 0px 16px 24px #c3c8d3;
+                background-color: $white;
+                border-radius: 2.9rem;
+
+                padding: 4.2rem 3.2rem 5.4rem 3.8rem;
+
+                text-align: center;
+
+                h3 {
+                    margin-bottom: 2.7rem;
+                }
+
+                h2 {
+                    font-size: 4rem;
+                    margin-bottom: 0.3rem;
+                }
+
+                div.price {
+                    font-size: 9.3rem;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: bold;
+                    color: $dark-grey;
+
+                    margin-bottom: 0.9rem;
+
+                    line-height: 100%;
+                    @include flex(row, flex-start, flex-end);
+                    gap: 0.3rem;
+
+                    small {
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: bolder;
+                        color: $dark-grey;
+
+                        font-size: 5.2rem;
+                        line-height: 130%;
+                    }
+                }
+
+                a {
+                    margin-top: 0.9rem;
+                    height: 7rem;
+                    width: 100%;
+
+                    box-shadow: 0px 10px 16px #0000004a;
+
+                    background: $main-gradient;
+
+                    color: $white;
+                    font-weight: bold;
+                    font-family: "Montserrat";
+                    font-size: 2.4rem;
+                    display: block;
+
+                    border-radius: 3rem 0;
+
+                    transition: 0.32s ease-in;
+
+                    line-height: 7rem;
+
+                    &:hover {
+                        border-radius: 0 3rem;
+                        box-shadow: 10px 0px 16px #0000004a;
+                        transform: scale(1.05);
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        &::after {
+            height: 60.6rem;
+            width: 39.3rem;
+
+            content: "";
+            position: absolute;
+
+            top: -9.1rem;
+            left: 0;
+
+            animation: smooth infinite linear 6s 1s;
+
+            z-index: 1;
+            background: url(/assets/img/cubes_top_planos.png);
+        }
+
+        &::before {
+            height: 60.6rem;
+            width: 39.3rem;
+
+            content: "";
+            position: absolute;
+
+            bottom: 8.7rem;
+            right: 0;
+
+            animation: smooth infinite linear 6s;
+            transform-origin: right;
+
+            z-index: 1;
+
+            background: url(/assets/img/cubes_bottom_planos.png);
+        }
+    }
+
+    @include responsive(1150px) {
+        div.niv {
+            div.niv-boxes {
+                justify-content: center;
+            }
+
+            &::after {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    @include responsive(600px) {
+        div.niv {
+            div.niv-title {
+                h2 {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+}

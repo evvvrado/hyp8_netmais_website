@@ -25,6 +25,18 @@
   }
 }
 
+@keyframes smooth {
+  0% {
+    transform: translateY(-2rem) scale(1);
+  }
+  50% {
+    transform: translateY(0rem) scale(1.05);
+  }
+  100% {
+    transform: translateY(-2rem) scale(1);
+  }
+}
+
 @keyframes logoanimation {
   0% {
     transform: translateY(-4rem);

@@ -124,6 +124,17 @@ html [niv-follow] {
     transform: translateY(0px);
   }
 }
+@keyframes smooth {
+  0% {
+    transform: translateY(-2rem) scale(1);
+  }
+  50% {
+    transform: translateY(0rem) scale(1.05);
+  }
+  100% {
+    transform: translateY(-2rem) scale(1);
+  }
+}
 @keyframes logoanimation {
   0% {
     transform: translateY(-4rem);
@@ -630,10 +641,13 @@ section.hero div.niv div.niv-picture picture::after {
 }
 @media (max-width: 800px) {
   section.hero {
-    background-position: top center;
+    background-size: cover;
   }
   section.hero div.niv div.niv-text {
     z-index: 2;
+  }
+  section.hero div.niv div.niv-text h1 span {
+    display: block;
   }
   section.hero div.niv div.niv-picture {
     z-index: 1;
@@ -898,6 +912,7 @@ section.missao div.niv div.niv-picture .floating {
 @media (max-width: 600px) {
   section.missao {
     padding-top: 3rem;
+    background-size: cover;
   }
   section.missao div.niv {
     flex-direction: column;
@@ -911,8 +926,7 @@ section.missao div.niv div.niv-picture .floating {
   }
   section.missao div.niv div.niv-nav ul {
     width: 100%;
-    flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
   }
   section.missao div.niv div.niv-nav ul li {
     gap: 1rem;
@@ -924,36 +938,630 @@ section.missao div.niv div.niv-picture .floating {
     display: none;
   }
   section.missao div.niv div.niv-picture {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  section.missao div.niv div.niv-picture::after {
     display: none;
-  }
-  section.missao div.niv div.niv-picture picture {
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem 3rem 0 0;
-    overflow: hidden;
-  }
-  section.missao div.niv div.niv-picture picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  section.missao div.niv div.niv-picture picture[active] {
-    opacity: 0.2;
-    z-index: 2;
   }
   section.missao div.niv div.niv-text {
     width: 100%;
     max-width: 100%;
-    height: 45rem;
+    height: 60rem;
+  }
+}
+
+section.planos {
+  padding-top: 10.8rem;
+  padding-bottom: 8.7rem;
+  background: #eaeffa;
+  position: relative;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.planos div.niv div.niv-title {
+  text-align: center;
+  margin-bottom: 5.3rem;
+  position: relative;
+  z-index: 2;
+}
+section.planos div.niv div.niv-title h3 {
+  display: block;
+  transition: 1s;
+  transition-delay: 0;
+}
+section.planos div.niv div.niv-title h3[niv-fade] {
+  opacity: 0;
+  transform: scale(0) rotate(20deg);
+}
+section.planos div.niv div.niv-title h2 {
+  display: block;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+section.planos div.niv div.niv-title h2[niv-fade] {
+  opacity: 0;
+  transform: scale(0) rotate(20deg);
+}
+section.planos div.niv div.niv-boxes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+section.planos div.niv div.niv-boxes div.box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: 0.32s;
+  transition-delay: 0;
+  transform-style: preserve-3d;
+  height: 36.8rem;
+  width: 35.8rem;
+  box-shadow: 0px 16px 24px #c3c8d3;
+  background-color: white;
+  border-radius: 2.9rem;
+  padding: 4.2rem 3.2rem 5.4rem 3.8rem;
+  text-align: center;
+}
+section.planos div.niv div.niv-boxes div.box[niv-fade] {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+section.planos div.niv div.niv-boxes div.box h3 {
+  margin-bottom: 2.7rem;
+}
+section.planos div.niv div.niv-boxes div.box h2 {
+  font-size: 4rem;
+  margin-bottom: 0.3rem;
+}
+section.planos div.niv div.niv-boxes div.box div.price {
+  font-size: 9.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.9rem;
+  line-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+section.planos div.niv div.niv-boxes div.box div.price small {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  color: #333333;
+  font-size: 5.2rem;
+  line-height: 130%;
+}
+section.planos div.niv div.niv-boxes div.box a {
+  margin-top: 0.9rem;
+  height: 7rem;
+  width: 100%;
+  box-shadow: 0px 10px 16px #0000004a;
+  background: transparent linear-gradient(222deg, #f26522 0%, #f20732 100%) 0% 0% no-repeat padding-box;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 2.4rem;
+  display: block;
+  border-radius: 3rem 0;
+  transition: 0.32s ease-in;
+  line-height: 7rem;
+}
+section.planos div.niv div.niv-boxes div.box a:hover {
+  border-radius: 0 3rem;
+  box-shadow: 10px 0px 16px #0000004a;
+  transform: scale(1.05);
+}
+section.planos div.niv div.niv-boxes div.box:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+section.planos div.niv::after {
+  height: 60.6rem;
+  width: 39.3rem;
+  content: "";
+  position: absolute;
+  top: -9.1rem;
+  left: 0;
+  animation: smooth infinite linear 6s 1s;
+  z-index: 1;
+  background: url(/assets/img/cubes_top_planos.png);
+}
+section.planos div.niv::before {
+  height: 60.6rem;
+  width: 39.3rem;
+  content: "";
+  position: absolute;
+  bottom: 8.7rem;
+  right: 0;
+  animation: smooth infinite linear 6s;
+  transform-origin: right;
+  z-index: 1;
+  background: url(/assets/img/cubes_bottom_planos.png);
+}
+@media (max-width: 1150px) {
+  section.planos div.niv div.niv-boxes {
+    justify-content: center;
+  }
+  section.planos div.niv::after {
+    opacity: 0.4;
+  }
+}
+@media (max-width: 600px) {
+  section.planos div.niv div.niv-title h2 {
+    font-size: 3.5rem;
+  }
+}
+
+section.celular {
+  padding-top: 10.7rem;
+  padding-bottom: 13.2rem;
+  background: url("/assets/img/fundo_celular.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.celular div.niv {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+section.celular div.niv .floating {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+}
+section.celular div.niv div.niv-text {
+  max-width: 42.9rem;
+  margin-top: 20rem;
+}
+section.celular div.niv div.niv-text p {
+  color: white;
+  margin-bottom: 7.5rem;
+}
+section.celular div.niv div.niv-text h2 {
+  font-size: 4.2rem;
+  line-height: 6.3rem;
+  margin-bottom: 4.8arem;
+  color: white;
+  transition: 1s;
+  transition-delay: 0;
+}
+section.celular div.niv div.niv-text h2[niv-fade] {
+  opacity: 0;
+  transform: scale(0) rotate(20deg);
+}
+section.celular div.niv div.niv-text a {
+  display: block;
+  width: max-content;
+  transition: 0.32s;
+}
+section.celular div.niv div.niv-text a:hover {
+  opacity: 0.7;
+}
+section.celular div.niv div.niv-phone {
+  margin-right: 9.7rem;
+}
+section.celular div.niv div.niv-phone picture {
+  display: block;
+  transition: 1s;
+  transition-delay: 0.5s;
+  transform-style: preserve-3d;
+}
+section.celular div.niv div.niv-phone picture[niv-fade] {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+@media (max-width: 800px) {
+  section.celular div.niv div.niv-phone {
+    margin: 0;
+  }
+}
+@media (max-width: 800px) {
+  section.celular {
+    background-size: cover;
+    padding-bottom: 4rem;
+  }
+  section.celular div.niv {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  section.celular div.niv div.niv-text {
+    margin-top: 3rem;
+  }
+  section.celular div.niv div.niv-text a {
+    margin: 0 auto;
+  }
+}
+
+section.lojas {
+  position: relative;
+  padding-bottom: 15rem;
+  overflow: hidden;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.lojas div.niv {
+  padding-top: 9.6rem;
+}
+section.lojas div.niv div.niv-text {
+  position: relative;
+  max-width: 36rem;
+  z-index: 2;
+  transition: 1s;
+  transition-delay: 0;
+  position: relative;
+}
+section.lojas div.niv div.niv-text[niv-fade] {
+  opacity: 0;
+  transform: translateX(-20rem);
+}
+section.lojas div.niv div.niv-text h2 {
+  font-size: 4.2rem;
+  margin-bottom: 2.1rem;
+  margin-top: 0.3rem;
+}
+section.lojas div.niv div.niv-text::after {
+  height: 7.8rem;
+  width: 13.1rem;
+  position: absolute;
+  content: "";
+  background: url(/assets/img/effect_balls_lojas.svg);
+  background-size: cover;
+  left: -16.8rem;
+  top: 0.5rem;
+}
+section.lojas div.niv div.niv-text p {
+  color: #8d8d8d;
+}
+section.lojas div.niv div.niv-mapa {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+section.lojas div.niv div.niv-enderecos {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 15.4rem;
+}
+section.lojas div.niv div.niv-enderecos div.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+section.lojas div.niv div.niv-enderecos div.scroll div.box {
+  height: 15.2rem;
+  width: 35.1rem;
+  background-color: white;
+  box-shadow: 0px 6px 11px #00000029;
+  border-radius: 1.2rem;
+  padding: 1.5rem 0 0 1.14rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 2.1rem;
+  transition: 1s;
+  transition-delay: 0;
+}
+section.lojas div.niv div.niv-enderecos div.scroll div.box[niv-fade] {
+  opacity: 0;
+  transform: translateY(20rem);
+}
+section.lojas div.niv div.niv-enderecos div.scroll div.box:nth-child(1) {
+  transition-delay: 0.5s;
+}
+section.lojas div.niv div.niv-enderecos div.scroll div.box:nth-child(2) {
+  transition-delay: 1s;
+}
+section.lojas div.niv div.niv-enderecos div.scroll div.box:nth-child(3) {
+  transition-delay: 1.5s;
+}
+section.lojas div.niv div.niv-enderecos div.scroll div.box main {
+  max-width: 22.8rem;
+}
+section.lojas div.niv div.niv-enderecos div.scroll div.box main strong {
+  display: block;
+  font-size: 2.4rem;
+  font-family: "Lato";
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+@media (max-width: 1280px) {
+  section.lojas div.niv {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  section.lojas div.niv div.niv-text {
+    margin-left: 20rem;
+  }
+  section.lojas div.niv div.niv-mapa {
+    display: none;
+  }
+  section.lojas div.niv div.niv-enderecos {
+    margin-right: 10rem;
+    margin-top: 0;
+    width: max-content;
+  }
+  section.lojas div.niv div.niv-enderecos div.scroll {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  section.lojas div.niv {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  section.lojas div.niv div.niv-enderecos {
+    overflow: scroll;
+    width: 100vw;
+    padding: 5rem;
+    scroll-snap-type: x mandatory;
+  }
+  section.lojas div.niv div.niv-enderecos::-webkit-scrollbar {
+    display: none;
+  }
+  section.lojas div.niv div.niv-enderecos div.scroll {
+    flex-direction: row;
+    width: max-content;
+    gap: 0;
+  }
+  section.lojas div.niv div.niv-enderecos div.scroll div.box {
+    margin-left: 4rem;
+    scroll-snap-align: start;
+  }
+}
+
+section.contato {
+  padding-top: 9.7rem;
+  padding-bottom: 9.2rem;
+  position: relative;
+  background: url("/assets/img/fundo_contato.png");
+  background-position: center;
+}
+section.contato div.niv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section.contato div.niv div.floating {
+  position: absolute;
+  top: -5rem;
+  z-index: 2;
+  animation: upandown 7s linear infinite;
+}
+section.contato div.niv div.niv-title {
+  text-align: center;
+}
+section.contato div.niv div.niv-title h3 {
+  color: #f26522;
+  margin-bottom: 0.3rem;
+}
+section.contato div.niv div.niv-title h2 {
+  color: white;
+  font-size: 4.2rem;
+  margin-bottom: 1.6remrem;
+}
+section.contato div.niv div.niv-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 55.2rem;
+  width: 100%;
+}
+section.contato div.niv div.niv-form form {
+  width: 100%;
+}
+section.contato div.niv div.niv-form label {
+  width: 100%;
+  display: block;
+  transition: 0.6s;
+  transition-delay: 0;
+}
+section.contato div.niv div.niv-form label[niv-fade] {
+  opacity: 0;
+  transform: translateY(20rem) scale(0);
+}
+section.contato div.niv div.niv-form label:nth-child(1) {
+  transition-delay: 0.5s;
+}
+section.contato div.niv div.niv-form label:nth-child(2) {
+  transition-delay: 1s;
+}
+section.contato div.niv div.niv-form label:nth-child(3) {
+  transition-delay: 1.5s;
+}
+section.contato div.niv div.niv-form label:nth-child(4) {
+  transition-delay: 2s;
+}
+section.contato div.niv div.niv-form label input,
+section.contato div.niv div.niv-form label textarea {
+  margin-top: 1.6rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  color: #333333;
+  font-family: "Roboto";
+  width: 100%;
+  padding-left: 2.2rem;
+}
+section.contato div.niv div.niv-form label input {
+  height: 6rem;
+}
+section.contato div.niv div.niv-form label textarea {
+  height: 16.3rem;
+  padding-top: 1.6rem;
+}
+section.contato div.niv div.niv-form button {
+  height: 6rem;
+  width: 100%;
+  max-width: 23rem;
+  margin: 0 auto;
+  display: block;
+  margin-top: 1.6rem;
+  box-shadow: 0px 10px 16px #0000004a;
+  background: transparent linear-gradient(222deg, #f26522 0%, #f20732 100%) 0% 0% no-repeat padding-box;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+  border-radius: 3rem 0;
+  transition: 0.32s ease-in;
+}
+section.contato div.niv div.niv-form button:hover {
+  border-radius: 0 3rem;
+  box-shadow: 10px 0px 16px #0000004a;
+  transform: scale(1.05);
+}
+
+footer {
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+footer div[fluid] {
+  padding-top: 6rem;
+  background-color: #07038c;
+}
+footer div[fluid] div.niv div.niv-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+}
+footer div[fluid] div.niv div.niv-top ul {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 57.1rem;
+}
+footer div[fluid] div.niv div.niv-top ul li {
+  transition: 0.32s;
+  color: white;
+  font-size: 1.6rem;
+  font-family: "Roboto";
+}
+footer div[fluid] div.niv div.niv-top ul li:hover {
+  color: #f26522;
+  font-weight: bold;
+  opacity: 0.7;
+}
+footer div[fluid] div.niv div.niv-top div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  gap: 0.9rem;
+}
+footer div[fluid] div.niv div.niv-top div a {
+  transition: 0.32s;
+}
+footer div[fluid] div.niv div.niv-top div a:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+footer div[fluid] div.niv div.niv-copyright {
+  border-top: solid #b4acdc 0.1rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  margin-top: 4.8rem;
+}
+footer div[fluid] div.niv div.niv-copyright ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+footer div[fluid] div.niv div.niv-copyright ul li {
+  color: white;
+  opacity: 0.7;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+footer div[fluid] div.niv div.niv-copyright ul li:hover {
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  footer div[fluid] div.niv div.niv-top,
+footer div[fluid] div.niv div.niv-top ul,
+footer div[fluid] div.niv div.niv-copyright ul {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
   }
 }
 

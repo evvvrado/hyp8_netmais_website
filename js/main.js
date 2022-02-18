@@ -83,7 +83,7 @@ $(document).ready(() => {
     $(".backdrop").attr('hide', '');
 
     setTimeout(() => {
-        // $("body").toggleClass('overflow');
+        $("body").toggleClass('overflow');
         $("header").toggleAttr('starting', '');
     }, 2500);
 

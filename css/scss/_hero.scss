@@ -18,7 +18,7 @@ section.hero {
 
                 position: relative;
 
-                @include fade(scale(0) rotate(90deg), 1s, 2.5s);
+                @include fade(scale(0) rotate(90deg), 1s, 1s);
 
                 &::after {
                     content: "";
@@ -116,7 +116,7 @@ section.hero {
             }
 
             picture {
-                @include fade(translateX(-200px), 1.5s, 2.5s);
+                @include fade(translateX(-200px), 1.5s, 1s);
 
                 position: absolute;
 

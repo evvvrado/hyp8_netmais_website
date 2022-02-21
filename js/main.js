@@ -85,7 +85,7 @@ $(document).ready(() => {
     setTimeout(() => {
         $("body").toggleClass('overflow');
         $("header").toggleAttr('starting', '');
-    }, 1500);
+    }, 500);
 
     var i = 0;
     $(document).scroll(() => {

@@ -223,7 +223,7 @@ p {
   pointer-events: none;
   z-index: 5;
   transition: 4s cubic-bezier(0.5, 0, 0, 1);
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
 .backdrop[hide] {
   top: 200vh;
@@ -521,7 +521,7 @@ section.hero div.niv div.niv-text h1 {
   margin-top: 14.5rem;
   position: relative;
   transition: 1s;
-  transition-delay: 2.5s;
+  transition-delay: 1s;
 }
 section.hero div.niv div.niv-text h1[niv-fade] {
   opacity: 0;
@@ -608,7 +608,7 @@ section.hero div.niv div.niv-picture div.floating img:nth-child(3) {
 }
 section.hero div.niv div.niv-picture picture {
   transition: 1.5s;
-  transition-delay: 2.5s;
+  transition-delay: 1s;
   position: absolute;
   height: 66.6rem;
   width: 85.3rem;

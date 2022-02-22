@@ -10,8 +10,8 @@ html {
   scroll-behavior: smooth;
 
   ::selection {
-    color: black;
-    background: black;
+    color: $white;
+    background: $main-blue;
   }
 
   &::-webkit-scrollbar {

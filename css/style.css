@@ -318,6 +318,11 @@ header div[fluid].--menu div.niv ul {
   justify-content: center;
   flex-direction: column;
 }
+header div[fluid].--menu div.niv nav li a,
+header div[fluid].--menu div.niv div li a,
+header div[fluid].--menu div.niv ul li a {
+  font-size: 2.4rem;
+}
 header div[fluid] div.niv {
   max-width: 1681px !important;
   display: flex;
@@ -539,7 +544,7 @@ section.hero div.niv div.niv-text h1::after {
 }
 section.hero div.niv div.niv-text p {
   transition: 1s;
-  transition-delay: 3.7s;
+  transition-delay: 1.3s;
   margin-top: 2.5rem;
   color: white;
   font-size: 2.4rem;

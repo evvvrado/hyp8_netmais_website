@@ -35,7 +35,7 @@ section.hero {
             }
 
             p {
-                @include fade(translateY(4rem), 1s, 3.7s);
+                @include fade(translateY(4rem), 1s, 1.3s);
                 margin-top: 2.5rem;
                 color: $white;
                 font-size: 2.4rem;

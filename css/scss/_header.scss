@@ -74,6 +74,12 @@ header {
                 div,
                 ul {
                     @include flex(column, center, center);
+
+                    li {
+                        a {
+                            font-size: 2.4rem;
+                        }
+                    }
                 }
             }
         }

@@ -502,12 +502,24 @@
       </div>
 
       <div class="niv-mapa">
-        <img src="/assets/img/fundo_mapa_loja.png" alt="mapa de fundo">
+        <iframe active class="meio"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14888.601040525127!2d-45.8290432053486!3d-21.10657479854479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5be080da092b3%3A0x762826d3dbf9f36f!2sR.%20Jo%C3%A3o%20Lu%C3%ADs%20Machado%2C%20156%2C%20Campo%20do%20Meio%20-%20MG%2C%2037165-000!5e0!3m2!1spt-BR!2sbr!4v1645637305484!5m2!1spt-BR!2sbr"
+          width="1042" height="743" style="border:0; border-bottom-left-radius: 130px;" allowfullscreen="" loading="lazy"></iframe>
+
+
+        <iframe class="gerais"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.7136472161162!2d-45.76034789585296!3d-21.237614015545926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b59004e41b0a1f%3A0xd7dfcc4836256b4b!2sRua%20Dom%20Othon%20Motta%2C%20400%20-%20Centro%2C%20Campos%20Gerais%20-%20MG%2C%2037160-000!5e0!3m2!1spt-BR!2sbr!4v1645637409686!5m2!1spt-BR!2sbr"
+          width="1042" height="743" style="border:0; border-bottom-left-radius: 130px;" allowfullscreen="" loading="lazy"></iframe>
+
+
+        <iframe class="rioclaro"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d658.5887211887904!2d-46.1217977886328!3d-20.970964061644903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5d3ee76c88285%3A0xe9e5c3a592c379d6!2sR.%20Delfim%20Moreira%2C%20133%20-%20Centro%2C%20Carmo%20do%20Rio%20Claro%20-%20MG%2C%2037150-000!5e0!3m2!1spt-BR!2sbr!4v1645637449779!5m2!1spt-BR!2sbr"
+          width="1042" height="743" style="border:0; border-bottom-left-radius: 130px;" allowfullscreen="" loading="lazy"></iframe>
       </div>
 
       <div class="niv-enderecos">
         <div class="scroll">
-          <div class="box" niv-fade>
+          <div class="box" data-target="meio" niv-fade>
             <picture>
               <img src="/assets/img/icon_pin_lojas.svg" alt="ícone de mapa">
             </picture>
@@ -517,7 +529,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
             </main>
           </div>
-          <div class="box" niv-fade>
+          <div class="box" data-target="gerais" niv-fade>
             <picture>
               <img src="/assets/img/icon_pin_lojas.svg" alt="ícone de mapa">
             </picture>
@@ -527,7 +539,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
             </main>
           </div>
-          <div class="box" niv-fade>
+          <div class="box" data-target="rioclaro" niv-fade>
             <picture>
               <img src="/assets/img/icon_pin_lojas.svg" alt="ícone de mapa">
             </picture>

@@ -22,8 +22,8 @@ html {
   **/
 }
 html ::selection {
-  color: black;
-  background: black;
+  color: white;
+  background: #056cf2;
 }
 html::-webkit-scrollbar {
   width: 0.5rem;
@@ -1222,6 +1222,7 @@ section.celular div.niv div.niv-phone picture[niv-fade] {
 section.lojas {
   position: relative;
   padding-bottom: 15rem;
+  margin-bottom: 14.7rem;
   overflow: hidden;
   /**
 
@@ -1281,6 +1282,18 @@ section.lojas div.niv div.niv-mapa {
   top: 0;
   z-index: 1;
 }
+section.lojas div.niv div.niv-mapa iframe {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.32s;
+  z-index: 1;
+}
+section.lojas div.niv div.niv-mapa iframe[active] {
+  position: static;
+  opacity: 1;
+  pointer-events: all;
+}
 section.lojas div.niv div.niv-enderecos {
   position: relative;
   z-index: 2;
@@ -1296,6 +1309,9 @@ section.lojas div.niv div.niv-enderecos div.scroll {
 section.lojas div.niv div.niv-enderecos div.scroll div.box {
   height: 15.2rem;
   width: 35.1rem;
+  transition: 0.32s;
+  cursor: pointer;
+  z-index: 2;
   background-color: white;
   box-shadow: 0px 6px 11px #00000029;
   border-radius: 1.2rem;
@@ -1355,9 +1371,25 @@ section.lojas div.niv div.niv-enderecos div.scroll div.box main strong {
   }
 }
 @media (max-width: 800px) {
+  section.lojas {
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+  }
   section.lojas div.niv {
     flex-direction: column;
     gap: 3rem;
+  }
+  section.lojas div.niv div.niv-mapa {
+    display: unset;
+    position: static;
+    width: 100%;
+  }
+  section.lojas div.niv div.niv-mapa iframe {
+    width: 100%;
+    height: 250px;
+    border-bottom-left-radius: 0 !important;
+    transition: 0.32s;
+    border-radius: 2.5rem;
   }
   section.lojas div.niv div.niv-enderecos {
     overflow: scroll;

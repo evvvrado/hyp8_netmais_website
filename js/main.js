@@ -308,6 +308,12 @@ $(document).ready(function () {
         $('header div[fluid] div.niv nav ul li').removeAttr('active');
         $(this).attr('active', '')
     })
+
+    $('section.lojas div.niv div.niv-enderecos div.scroll div.box').click(function () {
+        $('section.lojas div.niv div.niv-mapa iframe').removeAttr('active');
+
+        $(`section.lojas div.niv div.niv-mapa iframe.${$(this).data('target')}`).attr('active', '');
+    })
 })
 
 

@@ -26,20 +26,20 @@ section.planos {
         }
 
         div.niv-boxes {
-            @include flex(row, flex-start, flex-start);
+            @include flex(row, flex-start, center);
             gap: 3rem;
             flex-wrap: wrap;
             position: relative;
             z-index: 2;
 
             div.box {
-                @include flex(column, center, flex-start);
+                @include flex(column, center, center);
 
                 @include fade(rotateY(180deg), 0.32s);
                 transform-style: preserve-3d;
 
-                height: 36.8rem;
-                width: 35.8rem;
+                height: 45.8rem;
+                width: 40.8rem;
                 box-shadow: 0px 16px 24px #c3c8d3;
                 background-color: $white;
                 border-radius: 2.9rem;

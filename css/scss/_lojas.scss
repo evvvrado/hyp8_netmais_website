@@ -85,7 +85,7 @@ section.lojas {
                     padding: 1.5rem 0 0 1.14rem;
 
                     @include flex(row, flex-start, flex-start);
-                    gap: 2.1rem;
+                    gap: 1.1rem;
                     @include fade(translateY(20rem), 1s);
 
                     @for $i from 1 through 3 {
@@ -95,7 +95,7 @@ section.lojas {
                     }
 
                     main {
-                        max-width: 22.8rem;
+                        max-width: 30.8rem;
 
                         strong {
                             display: block;
@@ -103,6 +103,32 @@ section.lojas {
                             font-family: "Lato";
                             font-weight: bold;
                             margin-bottom: 0.8rem;
+                        }
+
+                        picture {
+                            padding-top: 2rem;
+                            display: block;
+                            a {
+                                svg {
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+
+                                    fill: $main-blue;
+
+                                    &:hover {
+                                        opacity: 0.6;
+                                    }
+
+                                    &.phone {
+                                        width: unset;
+                                        height: unset;
+
+                                        margin-left: 1rem;
+
+                                        fill: $main-blue;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

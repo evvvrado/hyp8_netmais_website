@@ -1,5 +1,5 @@
 section.missao {
-    background: url(/assets/img/fundo_missao.svg);
+    background: url(../assets/img/fundo_missao.svg);
 
     div.niv {
         @include flex(row, center, space-between);

@@ -127,7 +127,7 @@ section.planos {
             animation: smooth infinite linear 6s 1s;
 
             z-index: 1;
-            background: url(/assets/img/cubes_top_planos.png);
+            background: url(../assets/img/cubes_top_planos.png);
         }
 
         &::before {
@@ -145,7 +145,7 @@ section.planos {
 
             z-index: 1;
 
-            background: url(/assets/img/cubes_bottom_planos.png);
+            background: url(../assets/img/cubes_bottom_planos.png);
         }
     }
 
